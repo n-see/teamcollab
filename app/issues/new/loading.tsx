@@ -4,9 +4,9 @@ import {Skeleton} from '@/app/components'
 const LoadingNewIssuePage = () => {
   return (
     <>
-      <Box className=''>
+      <Box className='max-w-xl'>
         <Skeleton/>
-        <Skeleton height={200}/>
+        <Skeleton height={'20rem'}/>
       </Box>
     </>
   )
