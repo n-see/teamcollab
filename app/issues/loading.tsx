@@ -1,14 +1,17 @@
 import { Table } from '@radix-ui/themes'
 import React from 'react'
 import IssuesStatusBadge from '../components/IssuesStatusBadge'
-import Skeleton from 'react-loading-skeleton'
-import 'react-loading-skeleton/dist/skeleton.css'
+import {Skeleton} from '@/app/components'
+
+import IssuesActions from './IssuesActions'
 
 const issues = [1,2,3,4,5]
 
 const LoadingIssuesPage = () => {
   return (
-    <Table.Root variant='surface'>
+    <>  
+        <IssuesActions/>
+        <Table.Root variant='surface'>
           <Table.Header>
             <Table.Row>
               <Table.ColumnHeaderCell>Issue</Table.ColumnHeaderCell>
@@ -20,16 +23,19 @@ const LoadingIssuesPage = () => {
             {issues.map(issue => (
               <Table.Row key={issue}>
                 <Table.Cell>
-                  <Skeleton/>
+                  <Skeleton baseColor="#202020" highlightColor="#444"/>
                   <div className='block md:hidden'>
-                  <Skeleton/>                  </div>
+                    <Skeleton baseColor="#202020" highlightColor="#444"/>          
+                  </div>
                 </Table.Cell>
-                <Table.Cell className='hidden md:table-cell'><Skeleton/></Table.Cell>
-                <Table.Cell className='hidden md:table-cell'><Skeleton/></Table.Cell>
+                <Table.Cell className='hidden md:table-cell'><Skeleton baseColor="#202020" highlightColor="#444"/></Table.Cell>
+                <Table.Cell className='hidden md:table-cell'><Skeleton baseColor="#202020" highlightColor="#444"/></Table.Cell>
               </Table.Row>
             ))}
           </Table.Body>
         </Table.Root>
+    </>
+    
   )
 }
 

@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <Theme accentColor="iris" scaling="110%">
+        <Theme appearance='dark' accentColor="iris" scaling="110%">
           <NavBar />
           <main>{children}</main>
         </Theme>
