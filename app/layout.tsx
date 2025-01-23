@@ -2,8 +2,10 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import NavBar from './NavBar'
-import { Theme, ThemePanel } from '@radix-ui/themes'
+import { Container, Theme, ThemePanel } from '@radix-ui/themes'
 import "@radix-ui/themes/styles.css";
+import AuthProvider from './auth/Provider'
+import QueryClientProvider from './QueryClientProvider'
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -23,10 +25,18 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <Theme appearance='dark' accentColor="iris" scaling="110%">
-          <NavBar />
-          <main>{children}</main>
-        </Theme>
+        <QueryClientProvider>
+          <AuthProvider>
+            <Theme appearance='dark' accentColor="iris" scaling="110%">
+              <NavBar />
+              <main className='p-5'>
+                <Container>
+                  {children}
+                </Container>
+              </main>
+            </Theme>
+          </AuthProvider>
+        </QueryClientProvider>
       </body>
     </html>
   )

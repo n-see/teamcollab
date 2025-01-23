@@ -1,6 +1,6 @@
 import { Table } from '@radix-ui/themes'
 import React from 'react'
-import IssuesStatusBadge from '../components/IssuesStatusBadge'
+import IssuesStatusBadge from '../../components/IssuesStatusBadge'
 import {Skeleton} from '@/app/components'
 
 import IssuesActions from './IssuesActions'

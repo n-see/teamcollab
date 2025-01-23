@@ -25,3 +25,9 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+@layer utilities {
+  .nav-link {
+    @apply text-zinc-600 hover:text-zinc-300 transition-colors
+  }
+}
