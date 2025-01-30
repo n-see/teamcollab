@@ -13,7 +13,7 @@
 // export default ErrorMessage
 
 import { Text } from '@radix-ui/themes'
-import React, { PropsWithChildren } from 'react'
+import { PropsWithChildren } from 'react'
 
 const ErrorMessage = ({children}:PropsWithChildren) => {
 

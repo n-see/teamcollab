@@ -1,6 +1,6 @@
+'use client'
 import { Card } from '@radix-ui/themes';
-import React from 'react'
-import {ResponsiveContainer, BarChart, XAxis, YAxis, Bar } from "recharts"
+import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from "recharts";
 
 const IssueChart = ({open, inProgress, closed}:{open:number;inProgress:number;closed:number}) => {
 
@@ -11,8 +11,9 @@ const IssueChart = ({open, inProgress, closed}:{open:number;inProgress:number;cl
     ]
   return (
     <>
+
     <Card>
-        <ResponsiveContainer>
+        <ResponsiveContainer width={"100%"} height={300}>
             <BarChart data={data}>
                 <XAxis dataKey={'label'}/>
                 <YAxis />

@@ -1,11 +1,10 @@
 "use client";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import React from "react";
-import { RiTeamLine } from "react-icons/ri";
+import { Avatar, Box, Container, DropdownMenu, Flex } from "@radix-ui/themes";
 import classnames from "classnames";
 import { useSession } from "next-auth/react";
-import { Avatar, Box, Container, DropdownMenu, Flex } from "@radix-ui/themes";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { RiTeamLine } from "react-icons/ri";
 import Skeleton from "./components/Skeleton";
 
 const NavBar = () => {

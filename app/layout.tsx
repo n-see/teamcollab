@@ -1,10 +1,10 @@
-import './globals.css'
+import { Container, Theme } from '@radix-ui/themes'
+import "@radix-ui/themes/styles.css"
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import NavBar from './NavBar'
-import { Container, Theme, ThemePanel } from '@radix-ui/themes'
-import "@radix-ui/themes/styles.css";
 import AuthProvider from './auth/Provider'
+import './globals.css'
+import NavBar from './NavBar'
 import QueryClientProvider from './QueryClientProvider'
 
 const inter = Inter({ 

@@ -1,9 +1,9 @@
+import { authOptions } from "@/app/auth/authOptions";
 import { patchIssueSchema } from "@/app/validationSchemas";
 import { prisma } from "@/prisma/client";
-import { NextRequest, NextResponse } from "next/server";
-import delay from 'delay'
-import { authOptions } from "@/app/auth/authOptions";
+import delay from 'delay';
 import { getServerSession } from "next-auth";
+import { NextRequest, NextResponse } from "next/server";
 
 export async function PATCH(request:NextRequest,{params}: {params:{id:string}}) {
     const sessions = await getServerSession(authOptions);

@@ -1,12 +1,11 @@
-import { Box, Link, Table } from "@radix-ui/themes";
-import React from "react";
-import IssuesActions from "./IssuesActions";
 import { IssuesStatusBadge } from "@/app/components";
+import Pagination from "@/app/components/Pagination";
 import { prisma } from "@/prisma/client";
 import { Issue, Status } from "@prisma/client";
-import NextLink from "next/link";
 import { ArrowUpIcon } from "@radix-ui/react-icons";
-import Pagination from "@/app/components/Pagination";
+import { Box, Link, Table } from "@radix-ui/themes";
+import NextLink from "next/link";
+import IssuesActions from "./IssuesActions";
 
 
 type SearchParams = Promise<{ status: Status, orderBy:keyof Issue,page:string}>;
